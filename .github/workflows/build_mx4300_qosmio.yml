@@ -1,4 +1,4 @@
-name: Build qosmio NSS MX4300 firmware images
+name: Build
 
 on:
     push:
@@ -41,7 +41,7 @@ jobs:
               uses: actions/checkout@v4
 
             - name: Import config
-              run: mv .config_qualcommax .config
+              run: mv nss-setup/config-nss.seed .config
 
             - name: Update feeds
               run: make package/symlinks
