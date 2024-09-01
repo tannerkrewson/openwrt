@@ -1,10 +1,14 @@
 name: Build Qualcomm AX
 
-on: workflow_dispatch
+on:
+    push:
+        branches:
+            - mx4300-dev
+
 
 jobs:
     build:
-        name: Build Qualcomm AX firmware images
+        name: Build MX4300 firmware images
         runs-on: ubuntu-latest
         permissions:
             contents: write
