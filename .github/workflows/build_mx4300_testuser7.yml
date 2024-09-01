@@ -1,4 +1,4 @@
-name: Build Qualcomm AX
+name: Build testuser7 MX4300 firmware images
 
 on:
     push:
@@ -8,7 +8,7 @@ on:
 
 jobs:
     build:
-        name: Build MX4300 firmware images
+        name: Build testuser7 MX4300 firmware images
         runs-on: ubuntu-latest
         permissions:
             contents: write
@@ -55,5 +55,5 @@ jobs:
             - name: Release
               uses: ncipollo/release-action@v1
               with:
-                tag: qualcommax-${{ env.SHA }}
+                tag: mx4300-dev-${{ env.SHA }}
                 artifacts: bin/targets/qualcommax/ipq807x/openwrt-qualcommax-ipq807x-*
