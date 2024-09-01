@@ -1,5 +1,4 @@
-name: Build testuser7 MX4300 firmware images
-
+name: Build
 on:
     push:
         branches:
